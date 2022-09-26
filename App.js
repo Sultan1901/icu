@@ -76,6 +76,7 @@ const CUL = () => {
         style={{ width: 200, height: 200 }}
       />
       <TextInput
+      
         onChangeText={onChangeww}
         placeholder="width"
         accessibilityLabel="input"
@@ -99,6 +100,7 @@ const CUL = () => {
         accessibilityLabel="input"
         accessibilityLabelledBy="formLabel"
       />
+
       <StatusBar style="auto" />
       <Text>Fluid: {Math.round(res6)}</Text>
       <Text>BMI: {res.toFixed(1)}</Text>
