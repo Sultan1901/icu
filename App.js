@@ -14,6 +14,7 @@ const [res4, onChangeres4] = React.useState(0);
 const [res5, onChangeres5] = React.useState(0);
 const [res6, onChangeres6] = React.useState(0);
 const [res7, onChangeres7] = React.useState(0);
+const [show , OnChangershow] = React.useState(false)
  useEffect(() => {
    CUL();
  });
@@ -100,9 +101,9 @@ const CUL = () => {
         accessibilityLabel="input"
         accessibilityLabelledBy="formLabel"
       />
+      
 
-      <StatusBar style="auto" />
-      <Text>Fluid: {Math.round(res6)}</Text>
+      {!show ? (<Text>Fluid: {Math.round(res6)}</Text>
       <Text>BMI: {res.toFixed(1)}</Text>
       <Text>IBW: {Math.round(res3)}</Text>
       <Text>ADW: {Math.round(res7)}</Text>
@@ -112,7 +113,9 @@ const CUL = () => {
       <Text>
         Protien: {Math.round(res4)} - {Math.round(res5)}
       </Text>
-      <Text>age {ag}</Text>
+      <Text>age {ag}</Text>):(<></>)}
+
+      
     </View>
   );
 }
