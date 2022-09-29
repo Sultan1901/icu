@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import {  Image, StyleSheet, Text, TextInput, View } from "react-native";
-import React, { useState, useEffect } from "react";
+import {  Button, Image, StyleSheet, Text, TextInput, View } from "react-native";
+import React, {  useEffect } from "react";
 export default function App() {
   const [ww, onChangeww] = React.useState(0);
 const [hh, onChangehh] = React.useState(0);
@@ -14,7 +14,7 @@ const [res4, onChangeres4] = React.useState(0);
 const [res5, onChangeres5] = React.useState(0);
 const [res6, onChangeres6] = React.useState(0);
 const [res7, onChangeres7] = React.useState(0);
-const [show , OnChangershow] = React.useState(false)
+const [click1 , onChangeclick1] = React.useState(false)
  useEffect(() => {
    CUL();
  });
@@ -68,6 +68,7 @@ const CUL = () => {
     ADW();
   };
   BMI();
+  
 };
   return (
     <View style={styles.container}>
@@ -77,7 +78,6 @@ const CUL = () => {
         style={{ width: 200, height: 200 }}
       />
       <TextInput
-      
         onChangeText={onChangeww}
         placeholder="width"
         accessibilityLabel="input"
@@ -101,21 +101,27 @@ const CUL = () => {
         accessibilityLabel="input"
         accessibilityLabelledBy="formLabel"
       />
-      
 
-      {!show ? (<Text>Fluid: {Math.round(res6)}</Text>
-      <Text>BMI: {res.toFixed(1)}</Text>
-      <Text>IBW: {Math.round(res3)}</Text>
-      <Text>ADW: {Math.round(res7)}</Text>
-      <Text>
-        KCAL: {res1.toFixed()} - {res2.toFixed()}
-      </Text>
-      <Text>
-        Protien: {Math.round(res4)} - {Math.round(res5)}
-      </Text>
-      <Text>age {ag}</Text>):(<></>)}
-
-      
+      <Button onPress={onChangeclick1} title="Calculate" color="black" />
+      {!click1 ? (
+        <>
+          
+        </>
+      ) : (
+        <>
+          <Text>Fluid: {Math.round(res6)}</Text>
+          <Text>BMI: {res.toFixed(1)}</Text>
+          <Text>IBW: {Math.round(res3)}</Text>
+          <Text>ADW: {Math.round(res7)}</Text>
+          <Text>
+            KCAL: {res1.toFixed()} - {res2.toFixed()}
+          </Text>
+          <Text>
+            Protien: {Math.round(res4)} - {Math.round(res5)}
+          </Text>
+          <Text>age {ag}</Text>
+        </>
+      )}
     </View>
   );
 }
