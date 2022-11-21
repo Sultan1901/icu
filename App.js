@@ -141,7 +141,7 @@ export default function App() {
         </>
       )}
       <View style={[styles.footer]}>
-        <Text>Coded by Sultan Alharbi</Text>
+        <Text>Coded by Sultan Alharbi - p04x@hotmail.com</Text>
         <Text>All results tested by Nutrition team</Text>
       </View>
     </View>
@@ -151,7 +151,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ffebcd",
+    backgroundColor: "silver",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -161,13 +161,13 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     alignItems: "center",
     justifyContent: "center",
-    
   },
   separator: {
     marginVertical: 8,
-    borderBottomColor: "#737373",
+    borderBottomColor: "black",
     borderWidth: 1,
     borderColor: "black",
+    color: "black",
   },
   flex: {
     flexDirection: "row",
@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
   },
 
   bigBlue: {
-    color: "#737373",
+    color: "black",
     fontWeight: "bold",
     fontSize: 30,
     marginBottom: 50,
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 15,
     marginBottom: 5,
-    margin:7
+    margin: 7,
   },
   input: {
     borderWidth: 1,
