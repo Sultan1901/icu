@@ -98,21 +98,23 @@ export default function App() {
           accessibilityLabelledBy="formLabel"
         />
       </View>
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangegender}
-        placeholder="gender"
-        accessibilityLabel="select"
-        accessibilityLabelledBy="formLabel"
-      />
+      <View style={styles.flex}>
+        <TextInput
+          style={styles.input}
+          onChangeText={onChangegender}
+          placeholder="gender"
+          accessibilityLabel="select"
+          accessibilityLabelledBy="formLabel"
+        />
 
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeag}
-        placeholder="age"
-        accessibilityLabel="input"
-        accessibilityLabelledBy="formLabel"
-      />
+        <TextInput
+          style={styles.input}
+          onChangeText={onChangeag}
+          placeholder="age"
+          accessibilityLabel="input"
+          accessibilityLabelledBy="formLabel"
+        />
+      </View>
 
       <View style={styles.separator}>
         <Button onPress={onChangeclick1} title="Calculate" />
@@ -152,10 +154,12 @@ const styles = StyleSheet.create({
   },
   flex: {
     flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   bigBlue: {
-    color: "blue",
+    color: "#737373",
     fontWeight: "bold",
     fontSize: 30,
     marginBottom: 50,
@@ -172,5 +176,6 @@ const styles = StyleSheet.create({
     padding: 8,
     margin: 4,
     borderRadius: 6,
+    width: 100,
   },
 });
