@@ -126,6 +126,7 @@ export default function App() {
           <Text style={[styles.red]}>Fluid: {Math.round(res6)}</Text>
           <Text style={[styles.red]}>BMI: {res.toFixed(1)}</Text>
           <Text style={[styles.red]}>IBW: {Math.round(res3)}</Text>
+
           <Text style={[styles.red]}>ADW: {Math.round(res7)}</Text>
           <Text style={[styles.red]}>
             KCAL: {res1.toFixed()} - {res2.toFixed()}
@@ -133,6 +134,7 @@ export default function App() {
           <Text style={[styles.red]}>
             Protien: {Math.round(res4)} - {Math.round(res5)}
           </Text>
+          <View style={[styles.footer]}><Text  >Coded by Sultan Alharbi - results tested by Nutrition team</Text></View>
         </>
       )}
     </View>
@@ -146,6 +148,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  footer: { marginTop: 80 },
+  fontWeight: "bold",
+  fontSize: 30,
   separator: {
     marginVertical: 8,
     borderBottomColor: "#737373",
