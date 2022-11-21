@@ -137,8 +137,10 @@ export default function App() {
         </>
       )}
       <View style={[styles.footer]}>
-        <Text>Coded by Sultan Alharbi</Text>
-        <Text>results tested by Nutrition team</Text>
+        <Text style={[styles.footer]}>Coded by Sultan Alharbi</Text>
+        <Text style={[styles.footer]}>
+          All results tested by Nutrition team
+        </Text>
       </View>
     </View>
   );
@@ -152,8 +154,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   footer: {
-    marginTop: 88,
-    color: "red",
+    marginTop:15,
+    color: "black",
     fontWeight: "bold",
     alignItems: "center",
     justifyContent: "center",
