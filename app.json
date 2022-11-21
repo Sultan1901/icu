@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "icucalculator",
-    "slug": "icucalculator",
+    "name": "app",
+    "slug": "app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/ICU_Medical_Logo_at_6.49.04_PM.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/ICU_Medical_Logo_at_6.49.04_PM.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
