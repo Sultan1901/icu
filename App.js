@@ -77,23 +77,23 @@ export default function App() {
     <View style={styles.container}>
       <Image
         source={{
-          uri: "https://cdn.dribbble.com/users/689802/screenshots/2588349/media/b7b44539de81f19743581ecd243775ee.gif",
+          uri: "https://upload.wikimedia.org/wikipedia/commons/b/b0/ICU_Medical_Logo_at_6.49.04_PM.png",
         }}
-        style={{ width: 150, height: 150, marginBottom: 55 }}
+        style={{ width: 100, height: 100, marginBottom: 55 }}
       />
       <Text style={[styles.bigBlue]}>ICU Calculator</Text>
       <View style={styles.flex}>
         <TextInput
           onChangeText={onChangeww}
           style={styles.input}
-          placeholder="width"
+          placeholder="Width"
           inlineImageLeft="search_icon"
           accessibilityLabelledBy="formLabel"
         />
         <TextInput
           style={styles.input}
           onChangeText={onChangehh}
-          placeholder="height"
+          placeholder="Height"
           accessibilityLabel="input"
           accessibilityLabelledBy="formLabel"
         />
@@ -102,7 +102,7 @@ export default function App() {
         <TextInput
           style={styles.input}
           onChangeText={onChangegender}
-          placeholder="gender"
+          placeholder="Gender"
           accessibilityLabel="select"
           accessibilityLabelledBy="formLabel"
         />
@@ -110,7 +110,7 @@ export default function App() {
         <TextInput
           style={styles.input}
           onChangeText={onChangeag}
-          placeholder="age"
+          placeholder="Age"
           accessibilityLabel="input"
           accessibilityLabelledBy="formLabel"
         />
@@ -123,24 +123,26 @@ export default function App() {
         <></>
       ) : (
         <>
-          <Text style={[styles.red]}>Fluid: {Math.round(res6)}</Text>
-          <Text style={[styles.red]}>BMI: {res.toFixed(1)}</Text>
-          <Text style={[styles.red]}>IBW: {Math.round(res3)}</Text>
+          <View style={styles.flex}>
+            <Text style={[styles.red]}>Fluid: {Math.round(res6)}</Text>
+            <Text style={[styles.red]}>BMI: {res.toFixed(1)}</Text>
+            <Text style={[styles.red]}>IBW: {Math.round(res3)}</Text>
+          </View>
 
-          <Text style={[styles.red]}>ADW: {Math.round(res7)}</Text>
-          <Text style={[styles.red]}>
-            KCAL: {res1.toFixed()} - {res2.toFixed()}
-          </Text>
-          <Text style={[styles.red]}>
-            Protien: {Math.round(res4)} - {Math.round(res5)}
-          </Text>
+          <View style={styles.flex}>
+            <Text style={[styles.red]}>ADW: {Math.round(res7)}</Text>
+            <Text style={[styles.red]}>
+              KCAL: {res1.toFixed()} - {res2.toFixed()}
+            </Text>
+            <Text style={[styles.red]}>
+              Protien: {Math.round(res4)} - {Math.round(res5)}
+            </Text>
+          </View>
         </>
       )}
       <View style={[styles.footer]}>
-        <Text style={[styles.footer]}>Coded by Sultan Alharbi</Text>
-        <Text style={[styles.footer]}>
-          All results tested by Nutrition team
-        </Text>
+        <Text>Coded by Sultan Alharbi</Text>
+        <Text>All results tested by Nutrition team</Text>
       </View>
     </View>
   );
@@ -154,11 +156,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   footer: {
-    marginTop:15,
+    marginTop: 230,
     color: "black",
     fontWeight: "bold",
     alignItems: "center",
     justifyContent: "center",
+    
   },
   separator: {
     marginVertical: 8,
@@ -179,10 +182,11 @@ const styles = StyleSheet.create({
     marginBottom: 50,
   },
   red: {
-    color: "red",
+    color: "black",
     fontWeight: "bold",
     fontSize: 15,
     marginBottom: 5,
+    margin:7
   },
   input: {
     borderWidth: 1,
