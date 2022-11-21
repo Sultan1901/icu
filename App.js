@@ -134,9 +134,12 @@ export default function App() {
           <Text style={[styles.red]}>
             Protien: {Math.round(res4)} - {Math.round(res5)}
           </Text>
-          <View style={[styles.footer]}><Text  >Coded by Sultan Alharbi - results tested by Nutrition team</Text></View>
         </>
       )}
+      <View style={[styles.footer]}>
+        <Text>Coded by Sultan Alharbi</Text>
+        <Text>results tested by Nutrition team</Text>
+      </View>
     </View>
   );
 }
@@ -148,9 +151,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  footer: { marginTop: 80 },
-  fontWeight: "bold",
-  fontSize: 30,
+  footer: {
+    marginTop: 88,
+    color: "red",
+    fontWeight: "bold",
+    alignItems: "center",
+    justifyContent: "center",
+  },
   separator: {
     marginVertical: 8,
     borderBottomColor: "#737373",
